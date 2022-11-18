@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JeongHun Lee">
+    <meta name="keywords" content="gameChart, top10Game, 게임순위, 인기게임소개">
+    <meta name="description" content="PC방 점유율을 기반으로 한 인기게임 소개">
+    <meta name="robots" content="all">
+    <title>top10Game</title>
+    <script>
+        let smartPhones=[
+            'iphone','ipod','ipad','opera mini','opera mobi','nokia','android',
+            'wedos','windows ce','blackberry','iemobile','sonyericsson'
+        ];
+        //스마트폰 구분
+        for(let i in smartPhones) {
+            if(navigator.userAgent.toLocaleLowerCase().match(new RegExp(smartPhones[i]))) {
+                document.location='http://ljh9412.dothome.co.kr/mindex.html'
+            }
+        }
+    </script>
+    <link rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="css/top10Game.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .animation_canvas {
+            margin-left: 29px;
+            position: relative;
+            width: 1020px;
+            overflow: hidden;
+        }
+        .slider_panel {
+            width: 12000px;
+            position: relative;
+        }
+        .slider_image {
+            margin-top: -20px;
+            width: 1020px;
+            height: 400px;
+        }
+        .button, button:active, button:focus {
+            width: 100px;
+            height: 25px;
+            background-color: #fff;
+        }
+        .button:disabled {
+            background-color: black;
+        }
+        .prev {
+            float: left;
+        }
+        .next {
+            float: right;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/imgslider.js"></script>    
+</head>
+<body>
+    <!--#wrapper 시작-->
+    <div id="wrapper">
+        <!--헤더영역 시작-->
+        <header>
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="image/horizontal_on_white_by_logaster.png" alt="logo">
+                </a>
+            </h1>
+            <ul class="infoLink">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+            <nav role="navigation">
+                <h2 class="hidden">메인메뉴</h2>
+                <ul class="mainMenu">
+                    <li><a href="#">게임순위</a>
+                        <ul class="gameChart">
+                            <li><a href="no1.html">1위</a></li>
+                            <li><a href="#">2위</a></li>
+                            <li><a href="#">3위</a></li>
+                            <li><a href="#">4위</a></li>
+                            <li><a href="#">5위</a></li>
+                            <li><a href="#">6위</a></li>
+                            <li><a href="#">7위</a></li>
+                            <li><a href="#">8위</a></li>
+                            <li><a href="#">9위</a></li>
+                            <li><a href="#">10위</a></li>
+                        </ul>
+                    </li>    
+                </ul>    
+            </nav>
+        </header>
+        <!--헤더영역 종료-->
+        <!--비주얼 영역 시작--> 
+        <div id="visual">
+            <div class="animation_canvas">
+                <div class="slider_panel">
+                    <img class="slider_image" src="image/League-of-Legends.webp" alt="리그오브레전드">
+                    <img class="slider_image" src="image/fifa4.png" alt="피파온라인4">
+                    <img class="slider_image" src="image/sa.jpg" alt="서든어택">
+                    <img class="slider_image" src="image/lostark.jpg" alt="로스트아크">
+                    <img class="slider_image" src="image/maplestory.jpg" alt="메이플스토리">
+                    <img class="slider_image" src="image/battlegroundimage.jpg" alt="배틀그라운드">
+                    <img class="slider_image" src="image/overwatch.jpg" alt="오버워치">
+                    <img class="slider_image" src="image/VALORANT.jpg" alt="발로란트">
+                    <img class="slider_image" src="image/starcraft.jpg" alt="스타크래프트">
+                    <img class="slider_image" src="image/df.jpg" alt="던전앤파이터">
+                </div>
+                <button class="previous">◀</button>
+                <button class="next">▶</button>
+            </div>
+        </div>
+        <!--비주얼 영역 종료-->
+        <!--메인 콘텐츠 영역 시작-->    
+            <div id="contentsArea">
+                <!--게임순위 테이블 시작-->
+                <div class="gameRank">
+                    <h3>"게임순위"</h3>
+                    <span class="dnowdate">2022.07.11</span>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th scope="col">
+                                    <span>순위</span>
+                                </th>
+                                <th scope="col">
+                                    <span>게임정보</span>
+                                </th>
+                                <th scope="col">
+                                    <span>유통사</span>
+                                </th>
+                                <th scope="col">
+                                    <span>점유율</span>
+                                </th>
+                            </tr>
+                        </tbody>
+                        <tbody id="game_rank">
+                            <tr class="high">
+                                <td>
+                                    "1"    
+                                    <span class="stat">-</span>
+                                </td>
+                                <td class="name">
+                                    "리그 오브 레전드"
+                                </td>
+                                <td>라이엇게임즈</td>
+                                <td>42.8%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    "2"
+                                    <span class="stat">-</span>
+                                </td>
+                                <td class="name">FIFA 온라인 4</td>
+                                <td>넥슨</td>
+                                <td>11.35%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    "3"
+                                    <span class="stat_up">▲</span>
+                                </td>
+                                <td class="name">서든어택</td>
+                                <td>넥슨</td>
+                                <td>6.35%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    "4"
+                                    <span class="stat">-</span>
+                                </td>
+                                <td class="name">로스트아크</td>
+                                <td>스마일게이트</td>
+                                <td>6.28%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    "5"
+                                    <span class="stat_down">▼</span>
+                                </td>
+                                <td class="name">메이플스토리</td>
+                                <td>넥슨</td>
+                                <td>5.72%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    "6"
+                                    <span class="stat">-</span>
+                                </td>
+                                <td class="name">배틀그라운드</td>
+                                <td>카카오/스팀</td>
+                                <td>4.42%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    "7"
+                                    <span class="stat">-</span>
+                                </td>
+                                <td class="name">오버워치</td>
+                                <td>블리자드</td>
+                                <td>4.14%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    "8"
+                                    <span class="stat">-</span>
+                                </td>
+                                <td class="name">발로란트</td>
+                                <td>라이엇게임즈</td>
+                                <td>2.31%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    "9"
+                                    <span class="stat">-</span>
+                                </td>
+                                <td class="name">스타크래프트 리마스터</td>
+                                <td>블리자드</td>
+                                <td>2.29%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    "10"
+                                    <span class="stat">-</span>
+                                </td>
+                                <td class="name">던전앤파이터</td>
+                                <td>넥슨</td>
+                                <td>1.27%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--게임순위 테이블 종료-->
+                <!--질문게시판 시작-->
+                <div class="borad">
+                    <section id="questionBoard">
+                        <h2><a href="#questionBoard">공지사항</a></h2>
+                        <ul>
+                            <li>
+                                <a href="#">[공지]궁금한 것들을 게시판에 남겨주세요.</a>
+                                <time datetime="2022-06-30">2022.11.03</time>
+                            </li>
+                            <li>
+                                <a href="#">[공지]지나친폭언, 비난댓글등은 자제해주세요.</a>
+                                <time datetime="2022-06-30">2022.11.03</time>
+                            </li>
+                            <li>
+                                <a href="#">[공지]게임 메인홈페이지 링크</a>
+                                <time datetime="2022-06-30">2022.11.03</time>
+                            </li>
+                            <li>
+                                <a href="#">[공지]이것만은 지켜주세요</a>
+                                <time datetime="2022-06-30">2022.11.03</time>
+                            </li>
+                        </ul>                        
+                    </section>
+                </div>
+                <!--질문게시판 종료-->
+                <!--게임 신규 이벤트 안내 시작-->
+                <div id="linkArea">
+                    <section class="event">
+                        <h2>신규<span>이벤트</span></h2>
+                        <div id="eventDetail">
+                            <a href="https://maplestory.nexon.com/News/Event/Ongoing/621">
+                                <img src="image/hyperburning.jpg" alt="하이퍼 버닝이벤트 바로가기">
+                                <p>메이플스토리 250레벨까지<em> 하이퍼 버닝 이벤트!</em></p>
+                            </a>
+                            <a href="https://event.game.daum.net/pubg/deston2022/index.html">
+                                <img src="image/battleground.jpg" alt="신규 맵 데스턴 보러가기">
+                                <p>빌딩숲을 넘나드는 UP&DOWN 전투의 시작<em> 신규 맵 데스턴 사전예약 진행중!</em></p>
+                            </a>
+                            <a href="https://shop.fifaonline4.nexon.com/Events/220707/LuckyTOTS22?utm_source=pc&utm_medium=list&utm_campaign=luckytots">
+                                <img src="image/5125189306155008429.png" alt="2022 LUCKY TOTS 바로가기">
+                                <p>행운의 주인공은 단 1명<em> 2022 LUCKY TOTS</em></p>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+                <!--게임 신규 이벤트 안내 종료-->
+            </div>
+        <!--메인 콘텐츠 영역 종료-->
+        <!--푸터 영역 시작-->
+        <footer id="footer">
+            <div id="footerInner">
+                <section class="guide">
+                    <h2 class="hidden">사이트 이용안내</h2>
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">개인정보 보호정책</a></li>
+                        <li><a href="#">이메일 주소 무단 수집거부</a></li>
+                        <li><a href="#">site map</a></li>
+                    </ul>
+                </section>
+                <address>
+                    <span>서울시 금천구 시흥대로73길 11 무지개아파트10층</span>
+                    <span>· 전화: 02-805-0577</span>
+                    <span>· E-MAIL: <a href="mailto:ytytu057@naver.com">ytytu057@naver.com</a></span>
+                </address>
+            </div>
+        </footer>
+        <!--푸터 영역 종료-->
+    </div> 
+    <!--#wrapper 종료-->
+</body>
+</html>

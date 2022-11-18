@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* 초기화 */
+html, body, div, header, nav, section, footer, ul, li, tbody, table, tr, td, th, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+/* 숨김 콘텐츠 */
+.hidden {
+    position: absolute;
+    left: -9999px;
+}
+/* 웹 폰트 */
+@font-face {
+    font-family: "Nanum";
+    font-weight: 400;
+    src: url("font/NanumGothic.eot?#iefix")format("embedded-opentype"),
+         url("font/NanumGothic.woff")format("woff"),
+         url("font/NanumGothic.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumBold";
+    font-weight: 600;
+    src: url("font/NanumGothicBold.eot?#iefix")format("embedded-opentype"),
+         url("font/NanumGothicBold.woff")format("woff"),
+         url("font/NanumGothicBold.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumEX";
+    font-weight: 900;
+    src: url("font/NanumGothicExtraBold.eot?#iefix")format("embedded-opentype"),
+         url("font/NanumGothicExtraBold.woff")format("woff"),
+         url("font/NanumGothicExtraBold.ttf")format("truetype");
+}
+/* 링크 스타일 */
+a:link {
+    color: #4f4f4f;
+    text-decoration: none;
+}
+.a:visited {
+    color: #000;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #f00;
+    text-decoration: none;
+}
+/* 기본 스타일*/
+body {
+    font-family: "Nanum";
+    color: #000;
+    background-color: white;
+    font-size: 15px;
+    line-height: 1.2;
+}
+/* 전체적인 레이아웃 설계 */
+header, #visual, #contentsArea, #footerInner {
+    width: 1080px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+#wrapper {
+    background-image: linear-gradient(to bottom, #d1c3de 0%, #cfc4dd 7%, #cec6dd 14%, #cdc7dd 21%, #ccc9dd 27%, #cbcadd 33%, #caccdd 40%, #c9cedd 46%, #c8cfdd 52%, #c7d1dd 59%, #c6d2dd 66%, #c5d4dd 73%, #c4d5dd 80%, #c3d7dd 90%, #c2d9dd 100%);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+/* 헤더 영역 시작 */
+header {
+    margin: center;
+    height: 130px;
+    position: relative;
+    background-color: #d1c3de;
+    border-radius: 0 0 15px 15px;
+    padding: 0 30px;
+}
+.logo {
+    position: absolute;
+    top: 1px;
+    left: 16px;   
+}
+.logo > a > img {
+    width: 200px;
+    height: 30px;
+    object-fit: cover;
+}
+.infoLink {
+    text-align: right;
+}
+.infoLink > li {
+    display: inline-block;
+    padding: 8px 0 7px 3px;
+}
+.infoLink a::before {
+    content: "·";
+    padding-right: 8px;
+}
+.mainMenu {
+    background-image: linear-gradient(to bottom, #c2d9dd 0%, #5ACFE2 30%, #5CD1E5 100%);
+    padding-left: 10px;
+    height: 45px;
+    border-top: 2px solid #000;
+    border-radius: 0 0 5px 5px;
+}
+.mainMenu > li {
+    position: relative;
+}
+.mainMenu li, .mainMenu a {
+    display: inline-block;
+}
+.mainMenu > li > a {
+    font-family: "NanumEX";
+    font-size: 0.75em;
+    padding: 15px 20px 14px;
+    color: #fff;
+    letter-spacing: 10px;
+    border-left: 2px solid #fff;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.3),
+                 -1px 0 0 rgba(0, 0, 0, 0.3),
+                 0 1px  0 rgba(0, 0, 0, 0.3),
+                 0 -1px 0 rgba(0, 0, 0, 0.3);     
+}
+.mainMenu > li > a:hover, .mainMenu > li > a:focus {
+    color: #ff0;
+}
+.mainMenu > li > a:hover::after, .mainMenu > li > a:focus::after {
+    content: "";
+    display: block;
+    background: #000;
+    height: 2px;
+    width: 100%;
+    position: relative;
+    top: 12px;
+}
+.mainMenu ul {
+    position: relative;
+    z-index: 10;
+    white-space: nowrap;
+}
+.mainMenu ul a {
+    padding: 8px 0 7px 15px;
+}
+.mainMenu ul a::before {
+    content: "·";
+    font-family: "Nanum";
+    color: #666;
+    position: relative;
+    top: 2px;
+}
+.mainMenu ul a:hover::before, .mainMenu ul a :focus::before {
+    content: "☞";
+    color: #000;
+}
+.gameChart {
+    display: inline;
+}
+.gameChart li {
+    letter-spacing: 10px;
+}
+/* 헤더 영역 종료 */
+
+/* 비주얼 영역 시작 */
+#visual {
+    height: 400px;
+    position: relative;
+}
+/* 비주얼 영역 종료 */
+
+/* 메인 콘텐츠 영역 시작 */
+#contentsArea {
+    min-height: 780px;
+    margin: center;
+    height: 100px;
+    padding: 0px 0 0px 0px;
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    flex-flow: inherit;
+    /*overflow: hidden;*/
+}
+#questionBoard {
+    left: 20px;
+}
+/* 메인 콘텐츠 영역 종료 */
+
+/* 푸터 영역 시작 */
+#footer {
+    padding: 100px 0;
+    background-image: linear-gradient(to bottom, #c7c7c7 0%, #fff 70%, #fff 100%);
+}
+#footerInner {
+    position: relative;
+}
+.guide, address {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.guide {
+    background: #7b8385;
+    border-radius: 5px;
+    padding-left: 80px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.guide li {
+    display: inline-block;
+}
+.guide a {
+    display: inline-block;
+    color: rgba(6, 6, 7, 0.788);
+    padding: 10px 15px 10px 0;
+}
+.guide a::before {
+    content: "|";
+    padding-right: 20px;
+}
+.guide li:first-child a::before {
+    content: "";
+}
+address {
+    font-style: normal;
+    margin-bottom: 0px;
+}
+address > span {
+    margin-right: 20px;
+}
+/* 푸터 영역 종료 */

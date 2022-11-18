@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* memberArea 영역 시작 */
+#memberArea {
+    width: 1020px;
+    margin-left: 10px;
+    position: relative;
+}
+#memberArea h2 {
+    font-size: 1.5em;
+    font-family: "NanumEX";
+    color: aquamarine;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    border-bottom: 2px solid rgb(163, 235, 235);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.formSign {
+    text-align: right;
+    margin: 5px 0 5px;
+}
+.require {
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    text-indent: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.require::before {
+    font-family: "webcafeIcon";
+    content: "s";
+    color: #d63650;
+    position: relative;
+    left: -10px;
+}
+#joinForm {
+    border-top: 2px solid #ccc;
+}
+#joinForm p {
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+}
+#joinForm label, .mailing em {
+    float: left;
+    width: 120px;
+    padding: 15px 20px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #666;
+    background: #fffcef;
+}
+#joinForm .mailing label {
+    float: none;
+    padding: 0;
+    width: auto;
+    background: none;
+}
+#joinForm input {
+    margin: 10px 0;
+}
+#joinForm input:not([type="radio"]) {
+    border: 1px solid #aaa;
+    height: 18px;
+    padding-left: 5px;
+}
+#joinForm input[type="radio"] {
+    margin: 0;
+}
+a.idCheck, a.findZipcode {
+    font-family: "NanumEX";
+    font-size: 0.9em;
+    background-color: #d63650;
+    color: #fff;
+    padding: 3px 15px;
+    margin-left: 5px;
+    border-radius: 20px;
+    text-shadow: 1px 1px 1px #d63650, 1px -1px 1px #d63650;
+}
+.findZipcode {
+    position: absolute;
+    left: 230px;
+    top: 12px;
+}
+input#address {
+    display: block;
+    margin: 0;
+}
+.labelAddress {
+    height: 50px;
+    line-height: 50px;
+}
+.mailing em {
+    font-style: normal;
+    height: 35px;
+    line-height: 35px;
+}
+.mailing span {
+    display: block;
+    margin: 10px 0;
+}
+.btnJoinArea {
+    text-align: center;
+    margin: 15px 0;
+}
+.btnJoinArea button {
+    font-family: "NanumEX";
+    font-size: 1.2em;
+    color: #fff;
+    padding: 8px 20px;
+    margin: 0 5px;
+    border: 0;
+    border-radius: 3px;
+    letter-spacing: 1px;
+}
+.btnOk::before {
+    font-family: "webcafeIcon";
+    content: "h";
+    font-size: 2em;
+    line-height: 0;
+    position: relative;
+    top: 7px;
+    left: -5px;
+}
+.btnOk {
+    background: linear-gradient(to bottom, rgba(98,98,98,1) 0%, 
+    rgb(98,98,98) 50%, rgb(81,81,81) 100%);
+}
+.btnCancel {
+    background: linear-gradient(to bottom, rgba(145,145,145,0.8) 0%,
+    rgb(145,145,145) 50%, rgb(81,81,81) 100%);
+}
+/* memberArea 영역 종료 */

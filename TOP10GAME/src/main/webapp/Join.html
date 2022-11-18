@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/join.css">
+    <style>
+        .animation_canvas {
+            margin-left: 29px;
+            position: relative;
+            width: 1020px;
+            overflow: hidden;
+        }
+        .slider_panel {
+            width: 12000px;
+            position: relative;
+        }
+        .slider_image {
+            margin-top: -20px;
+            width: 1020px;
+            height: 400px;
+        }
+        .button, button:active, button:focus {
+            width: 100px;
+            height: 25px;
+            background-color: #fff;
+        }
+        .button:disabled {
+            background-color: black;
+        }
+        .prev {
+            float: left;
+        }
+        .next {
+            float: right;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/imgslider.js"></script>
+    <title>회원정보</title>
+</head>
+<body>
+    <!-- #wrapper 시작-->
+    <div id="wrapper">
+        <!-- 헤더 영역 시작 -->
+        <header>
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="image/horizontal_on_white_by_logaster.png">
+                </a>
+            </h1>
+            <ul class="infoLink">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+            <nav role="navigation">
+                <h2 class="hidden">메인메뉴</h2>
+                <ul class="mainMenu">
+                    <li><a href="#">게임순위</a>
+                        <ul class="gameChart">
+                            <li><a href="no1.html">1위</a></li>
+                            <li><a href="#">2위</a></li>
+                            <li><a href="#">3위</a></li>
+                            <li><a href="#">4위</a></li>
+                            <li><a href="no5.html">5위</a></li>
+                            <li><a href="no6.html">6위</a></li>
+                            <li><a href="#">7위</a></li>
+                            <li><a href="#">8위</a></li>
+                            <li><a href="#">9위</a></li>
+                            <li><a href="#">10위</a></li>
+                        </ul>
+                    </li>    
+                </ul>    
+            </nav>
+        </header>
+        <!-- 헤더 영역 종료 -->
+        <!-- 비주얼 영역 -->
+        <div id="visual">
+            <div id="visual">
+                <div class="animation_canvas">
+                    <div class="slider_panel">
+                        <img class="slider_image" src="image/League-of-Legends.webp" alt="리그오브레전드">
+                        <img class="slider_image" src="image/fifa4.png" alt="피파온라인4">
+                        <img class="slider_image" src="image/sa.jpg" alt="서든어택">
+                        <img class="slider_image" src="image/lostark.jpg" alt="로스트아크">
+                        <img class="slider_image" src="image/maplestory.jpg" alt="메이플스토리">
+                        <img class="slider_image" src="image/battlegroundimage.jpg" alt="배틀그라운드">
+                        <img class="slider_image" src="image/overwatch.jpg" alt="오버워치">
+                        <img class="slider_image" src="image/VALORANT.jpg" alt="발로란트">
+                        <img class="slider_image" src="image/starcraft.jpg" alt="스타크래프트">
+                        <img class="slider_image" src="image/df.jpg" alt="던전앤파이터">
+                    </div>
+                    <button class="previous">◀</button>
+                    <button class="next">▶</button>
+                </div>
+            </div>
+        </div>
+        <!-- 비주얼 영역 종료 -->
+        <!-- 메인 콘텐츠 영역 시작 -->
+        <div id="contentsArea">
+            <!-- 회원 가입 영역 시작 -->
+            <section id="memberArea" class="memberJoin">
+                <h2>회원가입</h2>
+                <p class="formSign"><strong class="require">필수</strong>는
+                반드시 입력하여야 하는 항목입니다.</p>
+                <form action="join.jsp" method="post" id="joinForm" name="joinForm">
+                    <fieldset>
+                        <legend>회원가입 정보 입력 폼</legend>
+                        <p>
+                            <label for="name">성명<strong class="require">필수</strong></label>
+                            <input type="text" id="name" name="name" required placeholder="홍길동">
+                        </p>
+                        <p>
+                            <label for="id">아이디<strong class="require">필수</strong></label>
+                            <input type="text" id="id" name="id" required placeholder="Guest">
+                            <a href="pop_idCheck.html" class="idCheck">ID중복확인</a>
+                        </p>
+                        <p>
+                            <label for="password">비밀번호<strong class="require">필수</strong></label>
+                            <input type="password" id="password" name="password" required 
+                            placeholder="영문/숫자 4~8자 이내">
+                        </p>
+                        <p>
+                            <label for="confirmPassword">비밀번호 확인
+                                <strong class="require">필수</strong></label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" 
+                            required>
+                        </p>
+                        <p>
+                            <label for="address" class="labelAddress">주소</label>
+                            <a href="find_zipcode.html" class="findZipcode">우편번호 찾기</a>
+                            <input type="tel" id="zipcode" name="zipcode" maxlength="5" 
+                            size="6" title="우편번호">
+                            <input type="text" id="address" name="address" maxlength="100"
+                            size="60" placeholder="입력 예)서울시 종로구 관철동 11번지">
+                        </p>
+                        <p>
+                            <label for="tel">연락처</label>
+                            <input type="tel" id="tel" name="tel" maxlength="11" size="20"
+                            title="하이픈(-)은 입력할 수 없습니다." 
+                            placeholder="입력 예)01077773333">
+                        </p>
+                        <p>
+                            <label for="email">이메일<strong class="require">필수</strong></label>
+                            <input type="email" id="email" name="email" size="30" required
+                            placeholder="입력 예)ezen@gmail.com">
+                        </p>
+                        <p class="mailing">
+                            <em>메일링 리스트 가입</em>
+                            <span>메일링 리스트에 가입하시면 top10game의 뉴스레더를
+                                받아보실 수 있습니다.</span>
+                            <input type="radio" id="mailingOk" name="mailing" 
+                            value="Yes" checked><label for="mailingOk"> 예</label>
+                            <input type="radio" id="mailingNo" name="mailing" 
+                            value="No"><label for="mailingNo"> 아니오</label>   
+                        </p>
+                        <div class="btnJoinArea">
+                            <button type="submit" class="btnOk">회원가입</button>
+                            <button type="reset" class="btnCancel">취소</button>
+                        </div>                        
+                    </fieldset>                     
+                </form>
+            </section>            
+            <!-- 회원 가입 영역 종료 -->
+        </div>
+        <!-- 메인 콘텐츠 영역 종료-->
+        <!-- 푸터 영역 시작 -->
+        <footer id="footer">
+            <div id="footerInner">
+                <section class="guide">
+                    <h2 class="hidden">사이트 이용안내</h2>
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">개인정보 보호정책</a></li>
+                        <li><a href="#">이메일 주소 무단 수집거부</a></li>
+                        <li><a href="#">site map</a></li>
+                    </ul>
+                </section>
+                <address>
+                    <span>서울시 금천구 시흥대로73길 11 무지개아파트10층</span>
+                    <span>· 전화: 02-805-0577</span>
+                    <span>· E-MAIL: <a href="mailto:ytytu057@naver.com">ytytu057@naver.com</a></span>
+                </address>
+            </div>
+        </footer>
+        <!-- 푸터 영역 종료-->
+    </div>
+    <!-- #wrapper 종료 -->
+</body>
+</html>

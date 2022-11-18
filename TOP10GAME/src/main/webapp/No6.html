@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/no1.css">
+    <style>
+        .animation_canvas {
+            margin-left: 29px;
+            position: relative;
+            width: 1020px;
+            overflow: hidden;
+        }
+        .slider_panel {
+            width: 12000px;
+            position: relative;
+        }
+        .slider_image {
+            margin-top: -20px;
+            width: 1020px;
+            height: 400px;
+        }
+        .button, button:active, button:focus {
+            width: 100px;
+            height: 25px;
+            background-color: #fff;
+        }
+        .button:disabled {
+            background-color: black;
+        }
+        .prev {
+            float: left;
+        }
+        .next {
+            float: right;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/imgslider.js"></script>
+    <title>점유율6위</title>
+</head>
+<body>
+    <!-- #wrapper 시작-->
+    <div id="wrapper">
+        <!-- 헤더 영역 시작 -->
+        <header>
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="image/horizontal_on_white_by_logaster.png">
+                </a>
+            </h1>
+            <ul class="infoLink">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+            <nav role="navigation">
+                <h2 class="hidden">메인메뉴</h2>
+                <ul class="mainMenu">
+                    <li><a href="#">게임순위</a>
+                        <ul class="gameChart">
+                            <li><a href="no1.html">1위</a></li>
+                            <li><a href="#">2위</a></li>
+                            <li><a href="#">3위</a></li>
+                            <li><a href="#">4위</a></li>
+                            <li><a href="no5.html">5위</a></li>
+                            <li><a href="no6.html">6위</a></li>
+                            <li><a href="#">7위</a></li>
+                            <li><a href="#">8위</a></li>
+                            <li><a href="#">9위</a></li>
+                            <li><a href="#">10위</a></li>
+                        </ul>
+                    </li>    
+                </ul>    
+            </nav>
+        </header>
+        <!-- 헤더 영역 종료 -->
+        <!-- 비주얼 영역 -->
+        <div id="visual">
+            <div id="visual">
+                <div class="animation_canvas">
+                    <div class="slider_panel">
+                        <img class="slider_image" src="image/League-of-Legends.webp" alt="리그오브레전드">
+                        <img class="slider_image" src="image/fifa4.png" alt="피파온라인4">
+                        <img class="slider_image" src="image/sa.jpg" alt="서든어택">
+                        <img class="slider_image" src="image/lostark.jpg" alt="로스트아크">
+                        <img class="slider_image" src="image/maplestory.jpg" alt="메이플스토리">
+                        <img class="slider_image" src="image/battlegroundimage.jpg" alt="배틀그라운드">
+                        <img class="slider_image" src="image/overwatch.jpg" alt="오버워치">
+                        <img class="slider_image" src="image/VALORANT.jpg" alt="발로란트">
+                        <img class="slider_image" src="image/starcraft.jpg" alt="스타크래프트">
+                        <img class="slider_image" src="image/df.jpg" alt="던전앤파이터">
+                    </div>
+                    <button class="previous">◀</button>
+                    <button class="next">▶</button>
+                </div>
+            </div>
+        </div>
+        <!-- 비주얼 영역 종료 -->
+        <!-- 메인 콘텐츠 영역 시작 -->
+        <div id="contentsArea">
+            <!--게임 소개 영역 시작 -->
+            <section id="rankArea" class="share_no.6">
+                <h2>점유율6위</h2>
+                <p class="name">배틀그라운드</p><a href="https://pubg.game.daum.net/pubg/index.daum">바로가기</a>
+                <fieldset>
+                    <legend>게임소개</legend>
+                    <p>PUBG 스튜디오에서 개발하고 크래프톤에서 발행한 서바이벌 슈터 비디오 게임입니다. 현재 스팀과 카카오 통해 서비스 중이며, 대한민국 지역에서는 카카오 사가 퍼블리싱을 맡았습니다.
+                        외딴 섬에서 총 100명(경쟁모드는 64명)의 플레이어가 다양한 무기와 전략을 이용하여 마지막 1명(혹은 1팀)이 살아남는 순간까지 전투를 하게됩니다. 배틀그라운드에는 자기장 안전구역 시스템이 존재하는데
+                        시간이 지날수록 안전구역이 점점 좁혀지고 안전구역 외곽의 자기장에 플레이어가 닿으면 체력이 점점 깎이며 사망에 이르게 됩니다. 
+                    <video src="video/piobg.mp4" id="video_lol" controls></video>
+                    </p>
+                </fieldset>
+            </section>             
+            <!--게임 소개 영역 종료 -->
+        </div>
+        <!-- 메인 콘텐츠 영역 종료-->
+        <!-- 푸터 영역 시작 -->
+        <footer id="footer">
+            <div id="footerInner">
+                <section class="guide">
+                    <h2 class="hidden">사이트 이용안내</h2>
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">개인정보 보호정책</a></li>
+                        <li><a href="#">이메일 주소 무단 수집거부</a></li>
+                        <li><a href="#">site map</a></li>
+                    </ul>
+                </section>
+                <address>
+                    <span>서울시 금천구 시흥대로73길 11 무지개아파트10층</span>
+                    <span>· 전화: 02-805-0577</span>
+                    <span>· E-MAIL: <a href="mailto:ytytu057@naver.com">ytytu057@naver.com</a></span>
+                </address>
+            </div>
+        </footer>
+        <!-- 푸터 영역 종료-->
+    </div>
+    <!-- #wrapper 종료 -->
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/no1.css">
+    <style>
+        .animation_canvas {
+            margin-left: 29px;
+            position: relative;
+            width: 1020px;
+            overflow: hidden;
+        }
+        .slider_panel {
+            width: 12000px;
+            position: relative;
+        }
+        .slider_image {
+            margin-top: -20px;
+            width: 1020px;
+            height: 400px;
+        }
+        .button, button:active, button:focus {
+            width: 100px;
+            height: 25px;
+            background-color: #fff;
+        }
+        .button:disabled {
+            background-color: black;
+        }
+        .prev {
+            float: left;
+        }
+        .next {
+            float: right;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/imgslider.js"></script>
+    <title>점유율5위</title>
+</head>
+<body>
+    <!-- #wrapper 시작-->
+    <div id="wrapper">
+        <!-- 헤더 영역 시작 -->
+        <header>
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="image/horizontal_on_white_by_logaster.png">
+                </a>
+            </h1>
+            <ul class="infoLink">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+            <nav role="navigation">
+                <h2 class="hidden">메인메뉴</h2>
+                <ul class="mainMenu">
+                    <li><a href="#">게임순위</a>
+                        <ul class="gameChart">
+                            <li><a href="no1.html">1위</a></li>
+                            <li><a href="#">2위</a></li>
+                            <li><a href="#">3위</a></li>
+                            <li><a href="#">4위</a></li>
+                            <li><a href="no5.html">5위</a></li>
+                            <li><a href="no6.html">6위</a></li>
+                            <li><a href="#">7위</a></li>
+                            <li><a href="#">8위</a></li>
+                            <li><a href="#">9위</a></li>
+                            <li><a href="#">10위</a></li>
+                        </ul>
+                    </li>    
+                </ul>    
+            </nav>
+        </header>
+        <!-- 헤더 영역 종료 -->
+        <!-- 비주얼 영역 -->
+        <div id="visual">
+            <div id="visual">
+                <div class="animation_canvas">
+                    <div class="slider_panel">
+                        <img class="slider_image" src="image/League-of-Legends.webp" alt="리그오브레전드">
+                        <img class="slider_image" src="image/fifa4.png" alt="피파온라인4">
+                        <img class="slider_image" src="image/sa.jpg" alt="서든어택">
+                        <img class="slider_image" src="image/lostark.jpg" alt="로스트아크">
+                        <img class="slider_image" src="image/maplestory.jpg" alt="메이플스토리">
+                        <img class="slider_image" src="image/battlegroundimage.jpg" alt="배틀그라운드">
+                        <img class="slider_image" src="image/overwatch.jpg" alt="오버워치">
+                        <img class="slider_image" src="image/VALORANT.jpg" alt="발로란트">
+                        <img class="slider_image" src="image/starcraft.jpg" alt="스타크래프트">
+                        <img class="slider_image" src="image/df.jpg" alt="던전앤파이터">
+                    </div>
+                    <button class="previous">◀</button>
+                    <button class="next">▶</button>
+                </div>
+            </div>
+        </div>
+        <!-- 비주얼 영역 종료 -->
+        <!-- 메인 콘텐츠 영역 시작 -->
+        <div id="contentsArea">
+            <!-- 게임 소개 영역 시작 -->
+            <section id="rankArea" class="share_no.5">
+                <h2>점유율5위</h2>
+                <p class="name"> 메이플스토리</p><a href="https://maplestory.nexon.com/Home/Main#a">바로가기</a>
+                <fieldset>
+                    <legend>게임소개</legend>
+                    <p>위젯 스튜디오에서 제작한 온라인 MMORPG이자 넥슨의 인기 온라인 게임 메이플스토리입니다. SD처럼 생긴 캐릭터가 모험을 떠나며 성장하는 게임으로, 어린 게이머나 3D 게임에 익숙하지 않은 일반인도 쉽게 마주하는 2D 횡스크롤 게임입니다.
+                        46개의 직업군으로 나뉘어져있고 다채로운 필드에서의 여행과 모험을 강조하고 있습니다.  
+                    <video src="video/maplestory.mp4" id="video_lol" controls></video>
+                    </p>
+                </fieldset>
+            </section>            
+            <!-- 게임 소개 영역 종료 -->
+        </div>
+        <!-- 메인 콘텐츠 영역 종료-->
+        <!-- 푸터 영역 시작 -->
+        <footer id="footer">
+            <div id="footerInner">
+                <section class="guide">
+                    <h2 class="hidden">사이트 이용안내</h2>
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">개인정보 보호정책</a></li>
+                        <li><a href="#">이메일 주소 무단 수집거부</a></li>
+                        <li><a href="#">site map</a></li>
+                    </ul>
+                </section>
+                <address>
+                    <span>서울시 금천구 시흥대로73길 11 무지개아파트10층</span>
+                    <span>· 전화: 02-805-0577</span>
+                    <span>· E-MAIL: <a href="mailto:ytytu057@naver.com">ytytu057@naver.com</a></span>
+                </address>
+            </div>
+        </footer>
+        <!-- 푸터 영역 종료-->
+    </div>
+    <!-- #wrapper 종료 -->
+</body>
+</html>
